@@ -24,7 +24,7 @@
 
 如果我的工具对你有帮助，欢迎在爱发电支持：
 
-☕ https://afdian.com/a/emole
+☕ https://afdian.com/a/emomooi
 
 ## 联系
 
