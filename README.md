@@ -29,4 +29,4 @@
 ## 联系
 
 - 邮箱：novelhelper@163.com
-- 爱发电：https://afdian.com/a/emole
+- 爱发电：https://afdian.com/a/emomooi
