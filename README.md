@@ -5,7 +5,8 @@
 ## 我在做什么
 
 **网文维权助手** —— 帮网文作者快速搜索盗版链接、一键投诉的浏览器扩展。
-（核心产品，目前开发中，暂未开源。）
+正式版已上线Microsoft Edge扩展商店
+https://microsoftedge.microsoft.com/addons/detail/chfgebleelcbdnahedlmfbndcdbofkfh
 
 -  十余个搜索引擎批量抓取
 -  一键跳转投诉平台并自动填表
