@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>支付完成 - 网文维权助手</title>
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;min-height:100vh;background:#F5F7F6;
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+       display:flex;align-items:center;justify-content:center;padding:24px 16px;}
+  .box{background:#fff;border-radius:14px;padding:34px 30px;max-width:460px;width:100%;
+       box-shadow:0 4px 24px rgba(0,0,0,.06);text-align:center;}
+  .tick{width:56px;height:56px;border-radius:50%;background:#2A9D8F;color:#fff;
+        font-size:30px;line-height:56px;margin:0 auto 20px;font-weight:600;}
+  h1{font-size:20px;color:#1F6B60;margin:0 0 16px;font-weight:600;}
+  p{font-size:14px;color:#555;line-height:1.9;margin:8px 0;}
+  .steps{text-align:left;background:#F5F7FA;border-radius:8px;padding:14px 16px;
+         margin:18px 0;font-size:13px;color:#555;line-height:2;}
+  .steps b{color:#2F3542;}
+  .orderbox{background:#F5F7FA;border-radius:8px;padding:12px;margin-top:16px;}
+  .orderid{font-family:Consolas,monospace;font-size:13px;color:#2F3542;
+           word-break:break-all;user-select:all;margin-bottom:10px;}
+  button{background:#2A9D8F;color:#fff;border:0;border-radius:6px;
+         padding:9px 18px;font-size:13px;cursor:pointer;}
+  .hint{font-size:12px;color:#8A94A6;margin-top:18px;line-height:1.8;}
+  .hidden{display:none;}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="tick">✓</div>
+  <h1>支付成功</h1>
+  <p>激活码会显示在插件的购买窗口里。</p>
+
+  <div class="steps">
+    <b>如果没看到激活码，可以这样找回：</b><br>
+    1. 打开插件 → 点「会员中心」<br>
+    2. 点底部「凭订单号找回」<br>
+    3. 粘贴下面的订单号，点查询
+  </div>
+
+  <div id="orderArea" class="orderbox hidden">
+    <div class="orderid" id="orderId"></div>
+    <button id="btnCopy">复制订单号</button>
+  </div>
+
+  <div id="noOrder" class="hint hidden">
+    没拿到订单号？可以在支付宝 App → 账单 → 这笔付款 → 详情里找到「商家订单号」。
+  </div>
+
+  <div class="hint">
+    激活码也会发送到你填写的邮箱，请注意查收（包括垃圾邮件）。<br>
+    如果都没收到，可以在插件里点「联系人工找回」。
+  </div>
+</div>
+
+<script>
+var params = new URLSearchParams(location.search);
+var orderId = (params.get('order') || '').trim();
+
+var orderArea = document.getElementById('orderArea');
+var orderIdEl = document.getElementById('orderId');
+var noOrder = document.getElementById('noOrder');
+var btnCopy = document.getElementById('btnCopy');
+
+if (orderId) {
+  orderIdEl.textContent = orderId;
+  orderArea.classList.remove('hidden');
+  btnCopy.addEventListener('click', function () {
+    function done() {
+      btnCopy.textContent = '已复制';
+      setTimeout(function () { btnCopy.textContent = '复制订单号'; }, 1500);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(orderId).then(done).catch(function () {
+        btnCopy.textContent = '复制失败，请手动选中';
+      });
+    } else {
+      var r = document.createRange();
+      r.selectNodeContents(orderIdEl);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+      btnCopy.textContent = '已选中，请手动复制';
+    }
+  });
+} else {
+  noOrder.classList.remove('hidden');
+}
+</script>
+</body>
+</html>
