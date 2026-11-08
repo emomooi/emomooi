@@ -10,6 +10,8 @@
 
 官方下载地址：https://microsoftedge.microsoft.com/addons/detail/chfgebleelcbdnahedlmfbndcdbofkfh
 
+离线包下载地址：https://github.com/emomooi/author-toolkit-releases/releases/latest/download/author-toolkit.zip
+
 -  十余个搜索引擎批量抓取
 -  一键跳转投诉平台并自动填表
 -  作品资料库 + 白名单管理
