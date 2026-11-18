@@ -1,6 +1,6 @@
 # 你好，我是 emomooi
 
-一个在业余时间做小工具的独立开发者。
+一个业余独立开发者。
 
 ## 我在做什么
 
@@ -12,7 +12,7 @@
 
 离线包下载地址：https://github.com/emomooi/author-toolkit-releases/releases/latest/download/author-toolkit.zip
 
--  十余个搜索引擎批量抓取
+-  十七个搜索引擎批量抓取
 -  一键跳转投诉平台并自动填表
 -  作品资料库 + 白名单管理
 -  多书 × 多引擎 × 多页自动搜索
@@ -21,9 +21,8 @@
 
 ## 我的一些项目
 
-- [novel-piracy-monitor-webview](https://github.com/emomooi/novel-piracy-monitor-webview) —— 网文盗版监控工具（WebView 版）
-- [novel-piracy-monitor-tkinter-legacy](https://github.com/emomooi/novel-piracy-monitor-tkinter-legacy) —— 同上的 tkinter 老版本（归档，留作历史参考）
-- [Anti-Piracy-TXT-Generator](https://github.com/emomooi/Anti-Piracy-TXT-Generator) —— TXT 防盗文诱饵生成器
+- [novel-piracy-monitor-webview](https://github.com/emomooi/novel-piracy-monitor-webview) —— 网文盗版监控工具（exe 桌面端）
+- [Anti-Piracy-TXT-Generator](https://github.com/emomooi/Anti-Piracy-TXT-Generator) —— TXT 假文包生成器
 
 ## 支持我
 
