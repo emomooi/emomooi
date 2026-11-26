@@ -10,7 +10,7 @@
 
 官方下载地址：https://microsoftedge.microsoft.com/addons/detail/chfgebleelcbdnahedlmfbndcdbofkfh
 
-离线包下载地址：[https://github.com/emomooi/author-toolkit-releases/releases/latest/download/author-toolkit.zip](https://github.com/emomooi/author-toolkit-releases/releases)
+离线包下载地址：[https://github.com/emomooi/author-toolkit-releases/releases)
 
 -  十七个搜索引擎批量抓取
 -  一键跳转投诉平台并自动填表
